@@ -9,10 +9,8 @@ module.exports.post_data=(req, res) => {
         var sql = "INSERT INTO Mysql_Crud SET ?";
         let query=Connection.query(sql,data,(err,result)=>{
             if(err) throw err;
-            
             console.log("Data has insertd!!!")
-            
-
             res.send("Data has inserted!!!")
+            
         })
-    }
+}
